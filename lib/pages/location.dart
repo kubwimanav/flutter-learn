@@ -28,7 +28,18 @@ class _LocationState extends State<Location> {
                 Navigator.pushNamed(context, '/gender');
               },
               icon: Icon(Icons.access_alarm)),
-        )
+        ),
+        Container(
+            child: ElevatedButton(
+          onPressed: () {
+            Navigator.pushNamed(context, '/gender');
+          },
+          style: ElevatedButton.styleFrom(
+              primary: Colors.green, onPrimary: Colors.blueGrey),
+          child: Text('Click Here',
+              style: TextStyle(
+                  color: Colors.black, backgroundColor: Colors.green)),
+        ))
       ],
     ));
   }

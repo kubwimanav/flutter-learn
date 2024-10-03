@@ -21,17 +21,55 @@ class _HomeState extends State<Home> {
             child: Image.asset('lib/assets/vincent.jpg'),
           ),
           Container(
-              child: IconButton(
-            icon: Icon(Icons.thumb_up), // The icon you want to use
-            iconSize: 40, // Size of the icon
-            color: Colors.blue, // Color of the icon
-            onPressed: () {
+              child: ElevatedButton(onPressed: (){
+
+               
               Navigator.pushNamed(context, '/location');
-            },
-          )),
+
+              },
+              style: ElevatedButton.styleFrom(
+                primary: Colors.green,
+                onPrimary: Colors.grey[200]              ),
+            
+               child: Text('Next Page')
+               )
+          ),
           Container(
             child: Column(
-              children: [Text('its of presentation')],
+              children: [Text('its end of my presentation',
+              style: TextStyle(
+                fontSize: 25.0,
+                fontFamily: 'IndieFlower',
+                fontWeight: FontWeight.bold
+              ),)],
+            ),
+          ),
+          Container(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  child: Icon(
+                    Icons.home_filled,
+                    size: 40.0,
+                    color: Colors.green,
+                  ),
+                ),
+                 Container(
+                  child: Icon(
+                    Icons.hail_outlined,
+                    size: 40.0,
+                    color: Colors.green,
+                  ),
+                ),
+                 Container(
+                  child: Icon(
+                    Icons.hail_outlined,
+                    size: 40.0,
+                    color: Colors.green,
+                  ),
+                )
+              ],
             ),
           )
         ],
