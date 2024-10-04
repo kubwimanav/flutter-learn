@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'List.dart';
 class Location extends StatefulWidget {
   const Location({super.key});
 
@@ -7,11 +7,29 @@ class Location extends StatefulWidget {
   State<Location> createState() => _LocationState();
 }
 
+// Widget Qoutetempelate (quotelist){
+//   return Card(
+//     shape: RoundedRectangleBorder(
+//           borderRadius: BorderRadius.circular(15)),
+//     child: Column(
+//       children: [
+//         Text(
+//           quotelist.text,
+//           style: TextStyle(
+//             fontSize: 18.0,
+//             fontFamily: 'IndieFlower',
+//             color: Colors.green
+//           ),
+        
+//         ),
+//         SizedBox(height: 5.0,)
+//       ],
+//     ),
+//   );
+// }
 class _LocationState extends State<Location> {
-  List<String> quote = [
-    'hello my friend',
-    'every one are you ok, thank you for your coming ',
-    'its time to party, every one are you ready'
+  List<Quotee> quotes = [
+   Quotee(text:'	How to change your brake pads',author: 'How to make a perfect coffee. How to live on Top Ramen for a year.')
   ];
   @override
   Widget build(BuildContext context) {
@@ -26,7 +44,7 @@ class _LocationState extends State<Location> {
         ),
         Container(
           child: Column(
-            children:quote.map((e) =>Text(e)).toList(),
+            children:quotes.map((quotelist) =>Text('$quotelist')).toList(),
           ),
         ),
         Container(

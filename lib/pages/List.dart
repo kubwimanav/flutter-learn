@@ -1,15 +1,13 @@
-import 'package:flutter/material.dart';
+class Quotee {
+  String text;
+  String author;
 
-class home extends StatefulWidget {
-  const home({super.key});
+  // Constructor
+  Quotee({required this.text, required this.author});
 
+  // Override toString() to print readable info
   @override
-  State<home> createState() => _homeState();
-}
-
-class _homeState extends State<home> {
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
+  String toString() {
+    return 'Quote: $text - Author: $author';
   }
 }
