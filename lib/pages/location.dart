@@ -8,6 +8,11 @@ class Location extends StatefulWidget {
 }
 
 class _LocationState extends State<Location> {
+  List<String> quote = [
+    'hello my friend',
+    'every one are you ok, thank you for your coming ',
+    'its time to party, every one are you ready'
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,6 +22,11 @@ class _LocationState extends State<Location> {
         Center(
           child: Container(
             child: Image.asset('lib/assets/vincent.jpg'),
+          ),
+        ),
+        Container(
+          child: Column(
+            children:quote.map((e) =>Text(e)).toList(),
           ),
         ),
         Container(
