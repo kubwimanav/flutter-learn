@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'List.dart';
 
@@ -15,8 +14,14 @@ class _LocationState extends State<Location> {
     Quotee(
         text: '	How to change your brake pads',
         author:
+            'How to make a perfect coffee. How to live on Top Ramen for a year.'),
+    Quotee(
+        text: '	How to change your brake pads',
+        author:
             'How to make a perfect coffee. How to live on Top Ramen for a year.')
   ];
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -29,15 +34,16 @@ class _LocationState extends State<Location> {
             child: Image.asset('lib/assets/vincent.jpg'),
           ),
         ),
-        Container(
-             
+        Card(
           child: Column(
-            children: quotes.map((quotelist) => Text('$quotelist')).toList(),
-              
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: quotes
+                .map((quotelist) => Text(
+                      '$quotelist',
+                      style: TextStyle(fontSize: 10, color: Colors.green),
+                    ))
+                .toList(),
           ),
-        ),
-        Container(
-          child: Text('hello this is location data'),
         ),
         Container(
           child: IconButton(
